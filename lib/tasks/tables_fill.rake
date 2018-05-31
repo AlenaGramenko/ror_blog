@@ -3,9 +3,7 @@ namespace :tables_fill do
   task set_text_data: :environment do
     #fill users
     users_name = ["Anna", "Gallina", "Ivan", "Alex", "Leon", "Sergey", "Alena", "Polina", "Vlad", "Vasiliy"]
-    i = 0
-    50.times do
-      i += 1
+    50.times do |i|
       u_name = "#{users_name[rand(10)]}_#{i}"
       u_email = "#{u_name}@test.com"
       u = User.new(name: u_name, email: u_email)
