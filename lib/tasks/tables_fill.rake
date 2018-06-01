@@ -15,7 +15,7 @@ namespace :tables_fill do
     end
     
     test_post_body = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    user_count = User.all.count
+    user_count = User.count
     
     #fill posts
     10.times do
@@ -33,7 +33,7 @@ namespace :tables_fill do
     end
     
     #fill comments:
-    posts_count = Post.all.count
+    posts_count = Post.count
     10.times do
       user = User.find(rand(user_count) + 1)
       post = Post.find(rand(posts_count) + 1)
