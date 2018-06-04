@@ -87,6 +87,9 @@ GEM
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
+    kaminari (0.17.0)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
     loofah (2.2.2)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -214,6 +217,7 @@ DEPENDENCIES
   duktape
   ffaker (~> 2.9)
   jbuilder (~> 2.5)
+  kaminari (~> 0.17.0)
   pg (>= 0.18, < 2.0)
   pry-byebug
   pry-rails
