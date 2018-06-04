@@ -18,19 +18,5 @@ p
 =< link_to 'Back', posts_path
 
 
-p
-  strong Comment:
-  table
-    tr
-      th
-        | User
-      th
-        | Body
-
-    - @post.comments.order(:created_at).each do |comment|
-
-      tr
-        td
-          = comment.user.name
-        td
-          = comment.body
+#comment_block
+  = render partial: "comment_block", locals: {comments: @comments}

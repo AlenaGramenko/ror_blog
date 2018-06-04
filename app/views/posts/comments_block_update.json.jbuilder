@@ -1,0 +1,1 @@
+json.partial! "posts/comment_block", comments: @comments

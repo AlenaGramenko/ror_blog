@@ -1,0 +1,17 @@
+  strong Comment:
+  table
+    tr
+      th
+        | User
+      th
+        | Body
+
+    - comments.each do |comment|
+      tr
+        td
+          = comment.user.name
+        td
+          = comment.body
+  = paginate comments
+
+
