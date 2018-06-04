@@ -1,8 +1,8 @@
-tr
-  td = post.title
-  td = post.body
-  td = post.user.name
-  td = post.visible
-  td = link_to 'Show', post
-  td = link_to 'Edit', edit_post_path(post)
-  td = link_to 'Destroy', post, data: { confirm: 'Are you sure?' }, method: :delete
+.post_block
+  strong = post.title
+  p.comment_body = post.body
+  p.comment_autor = post.user.name
+  p Visible: #{post.visible}
+  =' link_to 'Show', post
+  =' link_to 'Edit', edit_post_path(post)
+  = link_to 'Destroy', post, data: { confirm: 'Are you sure?' }, method: :delete
