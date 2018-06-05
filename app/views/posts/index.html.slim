@@ -1,12 +1,10 @@
 h1 Listing posts
-
 = render partial: "post", collection: @posts
 
 br
-
 = link_to 'New Post', new_post_path
 
 br
-
-= paginate @posts
+.paginator_wrap
+  = paginate @posts
 

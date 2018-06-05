@@ -6,6 +6,7 @@
           = comment.body
         p.comment_autor
           = comment.user.name
-  = paginate comments
+  .paginator_wrap
+    = paginate comments
 
 
