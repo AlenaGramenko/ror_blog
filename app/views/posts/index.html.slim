@@ -1,8 +1,8 @@
-h1 Listing posts
+h1 = t("posts_list")
 = render partial: "post", collection: @posts
 
 br
-= link_to 'New Post', new_post_path
+= link_to t("new_post"), new_post_path
 
 br
 .paginator_wrap

@@ -36,6 +36,10 @@ gem 'slim-rails', '~> 3.1', '>= 3.1.3'
 
 gem 'kaminari', '~> 0.17.0'
 
+gem 'devise', '~> 4.4', '>= 4.4.3'
+
+gem 'omniauth-facebook'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
@@ -45,6 +49,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'pry-byebug'
   gem 'ffaker', '~> 2.9'
+  gem "letter_opener"
 end
 
 group :development do

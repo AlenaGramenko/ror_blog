@@ -1,0 +1,32 @@
+header
+  ul
+    - if user_signed_in?
+
+      li
+        span
+          = t("label.hello")
+          |, #{current_user.name}
+
+      li
+        = link_to t("label.log_out"), destroy_user_session_path, method: :delete
+      
+      li
+        = link_to t("label.edit"), edit_user_registration_path
+      
+      li
+        = link_to t("label.posts"), posts_path
+
+    - else
+
+      li
+        = link_to t("label.log_in"), new_user_session_path
+
+      li
+        = link_to t("label.register"), new_user_registration_path
+
+  - if notice.present? || alert.present?
+    br
+    p[class="notice"]
+      = notice
+    p[class="alert"]
+      = alert

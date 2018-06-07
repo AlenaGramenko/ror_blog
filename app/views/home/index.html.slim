@@ -1,5 +1,6 @@
 - content_for(:description, "Home page of my blog")
 - content_for(:keywords, "Home, blog")
-h1 Hi!
-p You visited site #{session[:times_here]} times
-a href="home/about" About
+h1 = t("Hi!")
+p = t("hello")
+p = "#{t("site_v")} #{session[:times_here]} #{t("times")}"
+a href="home/about" = t(:about_link)

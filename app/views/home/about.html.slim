@@ -1,4 +1,4 @@
-- content_for(:description, "Information about me and my blog")
-- content_for(:keywords, "about blog, interesting blog")
+- content_for(:description, t(:about_info_description))
+- content_for(:keywords, t(:about_info_keywords))
 h1 =params[:name]
-p This is about #{params[:name]}
+p #{t(:about_text)} #{params[:name]}

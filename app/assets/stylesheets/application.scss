@@ -9,6 +9,9 @@ a {
   color: #00bcd4;
   text-decoration: none;
 }
+h1 {
+  color: #10d3ff;
+}
 form { width: 50%; position: relative; }
 .field { width: 100%; position: relative; }
 input[type="text"], select, textarea {
@@ -80,7 +83,7 @@ label {
   clear: both;
   margin: 20px 0;
 }
-.actions input[type="submit"] {
+input[type="submit"] {
   border: 1px solid #ccc;
   background-color: orange;
   color: #fff;

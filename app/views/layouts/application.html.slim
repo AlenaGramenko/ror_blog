@@ -2,15 +2,16 @@ doctype html
 html
   head
     title Blog
-    meta name="description" content= (content_for?(:description) ? yield(:description) : "Go to my blog. It is interesting33")
+    meta name="description" content= (content_for?(:description) ? yield(:description) : "Go to my blog. It is interesting")
     meta name="keywords" content= (content_for?(:keywords) ? yield(:keywords) : "Best blog, information, interests")
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag    'application', 'home', media: 'all'
     = javascript_include_tag 'application'
   body
+    = render "layouts/header"
     div id="header"
-      p Welcome to my blog
+      p = t(:welcome_on_site)
     = yield
     div id="footer"
 

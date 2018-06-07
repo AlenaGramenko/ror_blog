@@ -20,7 +20,7 @@ hash_users = 10.times.map do
   {
     name:     random_name,
     email:     random_email,
-    #password: "password"
+    password: "password"
   }
 end
 users = User.create!(hash_users)

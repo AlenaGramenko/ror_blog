@@ -3,9 +3,17 @@ ru:
     pagination:
       first: "&laquo; Первая"
       last: "Последняя &raquo;"
-      previous: "&lsaquo; Предидущая"
+      previous: "&lsaquo; Предыдущая"
       next: "Следующая &rsaquo;"
       truncate: "&hellip;"
+  new_post: "Новая публикация"
+  posts_list: "Публикации"
+  show: "Просмотр"
+  edit: "Редактирование"
+  destroy: "Удаление"
+  back: "Назад"
+  comments: "Комментарии"
+  editing_post: "Редактирование публикации"
   helpers:
     page_entries_info:
       one_page:
@@ -17,17 +25,43 @@ ru:
         display_entries: "Displaying %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> of <b>%{total}</b> in total"
         
   hello: "Привет"
+  about_info_description: "Информация про меня и мой блог"
+  about_info_keywords: "Про блог, интересный блог"
+  about_text: "Информация про блог...."
+  Hi!: "Привет!"
+  site_v: "Вы посетили сайт"
+  times: "раз"
+  about_link: "Про нас"
+  welcome_on_site: "Добро пожаловать на мой блог"
+  update: "Обновить"
   activerecord:
     models:
       user: "Пользователь"
+      post: "Публикация"
     attributes:
+      post:
+        user:
+          one: "Пользователь"
+          other: "Пользователи"
+        body: "Сообщение"
+        title: "Заголовок"
+        visible: "Видимость"
       user:
         password: Пароль
         password_confirmation: Подтверждение пароля
-        email: Email
+        email: Почта
         name: Имя пользователя
+        current_password: Текущий пароль
+    actions:
+      models:
+        post:
+          update: "Обновить"
     errors:
       models:
+        post:
+          attributes:
+            user:
+              required: "Обязательно указать пользователя"
         user:
           attributes:
             name:
@@ -35,6 +69,8 @@ ru:
               too_short: "Имя должно быть не менее 2 символов"
   label:
     log_out: "Выйти"
+    edit: "Редактировать профиль"
     log_in: "Войти"
     register: "Зарегестрироваться"
     hello: "Привет"
+    posts: "Публикации"

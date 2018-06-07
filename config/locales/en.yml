@@ -31,3 +31,22 @@
 
 en:
   hello: "Hello world"
+  about_info_description: "Information about me and my blog"
+  about_info_keywords: "about blog, interesting blog"
+  about_text: "This is about"
+  Hi!: "Hi!"
+  site_v: "You visited site"
+  times: "times"
+  about_link: "About"
+  welcome_on_site: "Welcome to my blog"
+  update: "Update"
+  new_post: "New post"
+  posts_list: "Listing posts"
+  show: "Show"
+  edit: "Edit"
+  destroy: "Destroy"
+  back: "Back"
+  comments: "Comments"
+  editing_post: "Editing post"
+  label:
+    posts: "Posts"
