@@ -1,11 +1,13 @@
 header
   nav#navbar-example2.navbar.navbar-light.bg-light
     - if user_signed_in?
-      a.navbar-brand = "#{t("label.hello")}, #{current_user.name}"
+      a[href="#" class="navbar-brand"]= "#{t("label.hello")}, #{current_user.name}"
             
     ul.nav.nav-pills
+      li.nav-item
+        = link_to "На главную", root_path, class: "nav-link"
+          
       - if user_signed_in?
-
         li.nav-item
           = link_to t("label.log_out"), destroy_user_session_path, method: :delete, class: "nav-link"
         
@@ -23,10 +25,13 @@ header
         li.nav-item
           = link_to t("label.register"), new_user_registration_path, class: "nav-link"
 
-    - if notice.present? || alert.present?
+    - if notice.present?
       div[class="alert alert-warning alert-dismissible fade show" role="alert"]
         = notice
         button[type="button" class="close" data-dismiss="alert" aria-label="Close"]
           span[aria-hidden="true"] == ("&times")
-      p[class="alert"]
+    - if alert.present?
+      div[class="alert alert-warning alert-dismissible fade show" role="alert"]
         = alert
+        button[type="button" class="close" data-dismiss="alert" aria-label="Close"]
+          span[aria-hidden="true"] == ("&times")

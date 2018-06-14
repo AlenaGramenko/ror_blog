@@ -6,16 +6,16 @@
         - @post.errors.full_messages.each do |message|
           li = message
 
-  .field
+  .form-group
     = f.label :title
-    = f.text_field :title
-  .field
+    = f.text_field :title, class: "form-control"
+  .form-group
     = f.label :user
-    = f.collection_select(:user_id, User.all, :id, :name, prompt: true)
-  .field
+    = f.collection_select(:user_id, User.all, :id, :name, {prompt: true}, {class: "form-control"})
+  .form-group
     = f.label :body
-    = f.text_area :body
-  .field_ch
+    = f.text_area :body, class: "form-control"
+  .form-group.form-check
+    = f.check_box :visible, class: "form-check-input"
     = f.label :visible
-    = f.check_box :visible
-  .actions = f.submit
+  = f.submit class: "btn btn-primary"

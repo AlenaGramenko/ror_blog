@@ -1,18 +1,4 @@
-p#notice = notice
+= render partial: "post", locals: {post: @post}
 
-p
-  strong
-    = @post.title
-p
-  = @post.body
-p
-  strong = "#{t("activerecord.attributes.post.user.one")}:"
-  = @post.user.name
-
-=> link_to t("edit"), edit_post_path(@post)
-'|
-=< link_to t("back"), posts_path
-
-
-#comment_block
+.container-fluid
   = render partial: "comment_block", locals: {comments: @comments}
