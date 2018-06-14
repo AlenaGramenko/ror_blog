@@ -6,12 +6,15 @@ html
     meta name="keywords" content= (content_for?(:keywords) ? yield(:keywords) : "Best blog, information, interests")
     = csrf_meta_tags
     = csp_meta_tag
-    = stylesheet_link_tag    'application', 'home', media: 'all'
-    = javascript_include_tag 'application'
+    //= stylesheet_link_tag    'application', 'home', media: 'all'
+    //= javascript_include_tag 'application'
+    
+    = stylesheet_pack_tag 'application'
+    = javascript_pack_tag 'application'
   body
     = render "layouts/header"
-    div id="header"
-      p = t(:welcome_on_site)
-    = yield
+    .container-fluid
+      h1 = t(:welcome_on_site)
+      = yield
     div id="footer"
 

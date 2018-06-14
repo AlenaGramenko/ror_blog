@@ -1,32 +1,32 @@
 header
-  ul
+  nav#navbar-example2.navbar.navbar-light.bg-light
     - if user_signed_in?
+      a.navbar-brand = "#{t("label.hello")}, #{current_user.name}"
+            
+    ul.nav.nav-pills
+      - if user_signed_in?
 
-      li
-        span
-          = t("label.hello")
-          |, #{current_user.name}
+        li.nav-item
+          = link_to t("label.log_out"), destroy_user_session_path, method: :delete, class: "nav-link"
+        
+        li.nav-item
+          = link_to t("label.edit"), edit_user_registration_path, class: "nav-link"
+        
+        li.nav-item
+          = link_to t("label.posts"), posts_path, class: "nav-link"
 
-      li
-        = link_to t("label.log_out"), destroy_user_session_path, method: :delete
-      
-      li
-        = link_to t("label.edit"), edit_user_registration_path
-      
-      li
-        = link_to t("label.posts"), posts_path
+      - else
 
-    - else
+        li.nav-item
+          = link_to t("label.log_in"), new_user_session_path, class: "nav-link"
 
-      li
-        = link_to t("label.log_in"), new_user_session_path
+        li.nav-item
+          = link_to t("label.register"), new_user_registration_path, class: "nav-link"
 
-      li
-        = link_to t("label.register"), new_user_registration_path
-
-  - if notice.present? || alert.present?
-    br
-    p[class="notice"]
-      = notice
-    p[class="alert"]
-      = alert
+    - if notice.present? || alert.present?
+      div[class="alert alert-warning alert-dismissible fade show" role="alert"]
+        = notice
+        button[type="button" class="close" data-dismiss="alert" aria-label="Close"]
+          span[aria-hidden="true"] == ("&times")
+      p[class="alert"]
+        = alert

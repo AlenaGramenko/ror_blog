@@ -38,6 +38,8 @@ gem 'kaminari', '~> 0.17.0'
 
 gem 'devise', '~> 4.4', '>= 4.4.3'
 
+gem 'foreman', '~> 0.82.0'
+
 gem 'omniauth-facebook'
 
 # Reduces boot times through caching; required in config/boot.rb

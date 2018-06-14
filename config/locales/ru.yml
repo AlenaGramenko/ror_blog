@@ -23,7 +23,9 @@ ru:
           other: "Displaying <b>all %{count}</b> %{entry_name}"
       more_pages:
         display_entries: "Displaying %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> of <b>%{total}</b> in total"
-        
+    submit:
+      create: "Создать"
+      update: "Обновить"
   hello: "Привет"
   about_info_description: "Информация про меня и мой блог"
   about_info_keywords: "Про блог, интересный блог"

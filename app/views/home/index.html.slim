@@ -2,5 +2,8 @@
 - content_for(:keywords, "Home, blog")
 h1 = t("Hi!")
 p = t("hello")
-p = "#{t("site_v")} #{session[:times_here]} #{t("times")}"
+p.alert.alert-primary #{t("site_v")} #{session[:times_here]} #{t("times")}
 a href="home/about" = t(:about_link)
+
+//= render "components/page/page" do
+  //p Hello from our first component
