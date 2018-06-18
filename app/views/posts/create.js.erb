@@ -1,0 +1,5 @@
+<% @post.errors.messages.each do |field| %>
+  <% field_id = "post_#{field[0].to_s}_error" %>
+  <% field_val = field[1][0] %>
+  //$("#<%#= field_id %>").innerHTML = "<%#= field_val %>";
+<% end %>

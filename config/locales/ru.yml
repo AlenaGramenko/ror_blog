@@ -64,6 +64,10 @@ ru:
           attributes:
             user:
               required: "Обязательно указать пользователя"
+            title:
+              blank: "Заголовок не должно быть пустым!"
+            body:
+              blank: "Боди не должно быть пустым!"
         user:
           attributes:
             name:

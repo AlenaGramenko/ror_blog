@@ -8,7 +8,8 @@
 // layout file, like app/views/layouts/application.html.erb
 import "bootstrap"
 import "init"
-import "components/page/page.js"
+//import "components/page/page.js"
+//import "components/post/post.js"
 import "jquery";
 import "jquery-ujs";
 console.log('Hello World from Webpacker')

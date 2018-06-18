@@ -1,6 +1,10 @@
 .page {
-  width: 100px;
-  height: 700px;
+  width: 700px;
+  height: 100px;
   margin: 0 auto;
   background: yellow;
+}
+
+body {
+  background: #e2c0e0;
 }

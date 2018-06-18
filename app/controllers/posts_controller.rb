@@ -36,9 +36,19 @@ class PostsController < ApplicationController
       if @post.save
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
         format.json { render :show, status: :created, location: @post }
+        format.js {
+                   flash[:notice] = 'Post was successfully created'
+                   render :js => "window.location.href=\"/posts/#{@post.id}\""
+                   }
       else
         format.html { render :new }
         format.json { render json: @post.errors, status: :unprocessable_entity }
+        format.js {
+           p "!!!!!!!!!!@post.errors"
+           p @post.errors.messages
+#{:user=>["Обязательно указать пользователя"], :title=>["Заголовок не должно быть пустым!"], :body=>["Боди не должно быть пустым!"]}
+           render 'create'
+        }
       end
     end
   end

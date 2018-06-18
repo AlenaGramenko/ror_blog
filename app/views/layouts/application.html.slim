@@ -11,6 +11,10 @@ html
     
     = stylesheet_pack_tag 'application'
     = javascript_pack_tag 'application'
+
+    = javascript_pack_tag params[:controller].gsub(/devise.*/, "users")
+    = stylesheet_pack_tag params[:controller].gsub(/devise.*/, "users")
+
   body
     = render "layouts/header"
     .container-fluid

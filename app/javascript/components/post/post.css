@@ -1,0 +1,12 @@
+body {
+  background: #baefbe;
+}
+
+.p_my_message {
+  background: #c2c2c2;
+  height: 30px;
+}
+
+.p_my_message p {
+  color: #fff;
+}
