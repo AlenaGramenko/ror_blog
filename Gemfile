@@ -51,8 +51,8 @@ group :development, :test do
   gem 'pry-rails'
   gem 'pry-byebug'
   gem 'ffaker', '~> 2.9'
-  gem "letter_opener"
 end
+gem "letter_opener"
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
