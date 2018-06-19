@@ -33,7 +33,7 @@ class User < ApplicationRecord
                              
   before_destroy :log_before_destroy
   after_destroy  :log_after_destroy
-  after_create :send_welcome_email
+  #after_create :send_welcome_email
   
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
