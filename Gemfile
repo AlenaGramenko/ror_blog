@@ -50,8 +50,8 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'pry-rails'
   gem 'pry-byebug'
-  gem 'ffaker', '~> 2.9'
 end
+gem 'ffaker', '~> 2.9'
 gem "letter_opener"
 
 group :development do
